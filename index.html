@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131a">
+  <meta name="description" content="Request a product and get a personal sourcing quote. No online checkout.">
+  <title>Northline Supply — Product Requests</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Northline Supply home">
+        <span class="brand-mark">N<span>.</span></span>
+        <span class="brand-name">NORTHLINE <span>SUPPLY</span></span>
+      </a>
+      <a class="top-link" href="#request">Request a product <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow"><span class="status-dot"></span> PERSONAL PRODUCT SOURCING</div>
+        <h1>Looking for something?<br><span>Let’s find it.</span></h1>
+        <p class="hero-copy">Tell us what you’re after. We’ll check suppliers, availability, and pricing, then get back to you with the details.</p>
+        <a class="primary-button" href="#request">Request a product <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="note-icon">↳</span> No checkout. No commitment. Just a request.</div>
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+        <div class="hero-grid"></div>
+      </section>
+
+      <section class="process" aria-label="How it works">
+        <div class="section-kicker">SIMPLE BY DESIGN</div>
+        <div class="process-grid">
+          <article class="process-card">
+            <span class="step-number">01</span>
+            <div class="process-icon" aria-hidden="true">⌕</div>
+            <h2>Tell us what you want</h2>
+            <p>Share the product, link, and any details that matter.</p>
+          </article>
+          <article class="process-card">
+            <span class="step-number">02</span>
+            <div class="process-icon" aria-hidden="true">↗</div>
+            <h2>We check the options</h2>
+            <p>We look into availability, supplier reliability, and total cost.</p>
+          </article>
+          <article class="process-card">
+            <span class="step-number">03</span>
+            <div class="process-icon" aria-hidden="true">✓</div>
+            <h2>You decide</h2>
+            <p>We contact you with a quote. Nothing is ordered until details are agreed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="request-section" id="request">
+        <div class="request-intro">
+          <div class="section-kicker">START A REQUEST</div>
+          <h2>What can we<br><span>help you find?</span></h2>
+          <p>Fill in the details below. We’ll follow up after checking whether we can source it and what it would cost.</p>
+          <div class="privacy-note">
+            <span class="privacy-symbol" aria-hidden="true">⌑</span>
+            <div><strong>Your details matter</strong><br><span>Only share information needed to respond to your request. Please don’t include passwords or sensitive personal information.</span></div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form id="product-request-form" action="https://formsubmit.co/landrumsilas@gmail.com" method="POST">
+            <!-- FormSubmit settings. The first real submission may require email activation. -->
+            <input type="hidden" name="_subject" value="New product request — Northline Supply">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_next" id="form-next" value="">
+
+            <div class="form-heading">
+              <span class="form-tag">REQUEST FORM</span>
+              <span class="required-label"><span>*</span> Required</span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="customer-name">Your name <span>*</span></label>
+                <input id="customer-name" name="Customer name" type="text" autocomplete="name" placeholder="How should we address you?" maxlength="100" required>
+              </div>
+              <div class="field">
+                <label for="customer-email">Email address <span>*</span></label>
+                <input id="customer-email" name="Customer email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="category">Category <span>*</span></label>
+              <select id="category" name="Product category" required>
+                <option value="" selected disabled>Select a category</option>
+                <option value="Tops">Tops</option>
+                <option value="Bottoms">Bottoms</option>
+                <option value="Footwear">Footwear</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Hoodies">Hoodies</option>
+                <option value="Colognes">Colognes</option>
+                <option value="Puffers">Puffers</option>
+                <option value="Legos">Legos</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="product">Item name <span>*</span></label>
+              <input id="product" name="Product requested" type="text" placeholder="Brand, product name, model..." maxlength="200" required>
+              <span class="field-help">A product link is welcome, but not required.</span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="quantity">Quantity <span>*</span></label>
+                <input id="quantity" name="Quantity" type="number" min="1" max="999" value="1" required>
+              </div>
+              <div class="field">
+                <label for="budget">Budget (optional)</label>
+                <div class="input-with-prefix"><span>$</span><input id="budget" name="Budget (USD)" type="number" min="0" max="1000000" step="0.01" placeholder="No set budget"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="details">Extra details <span class="optional">(optional)</span></label>
+              <textarea id="details" name="Additional details or product link" rows="4" maxlength="2000" placeholder="Size, color, version, a product URL, or anything else we should know..."></textarea>
+              <div class="character-count"><span id="char-count">0</span>/2000</div>
+            </div>
+
+            <label class="consent-check">
+              <input type="checkbox" id="request-ack" required>
+              <span>I understand this is only a request. Availability, authenticity, final price, and delivery timing must be confirmed before any sale.</span>
+            </label>
+
+            <section class="estimate-notice" aria-label="Estimated price and important disclaimers" aria-live="polite">
+              <div class="estimate-panel">
+                <div class="estimate-label">ESTIMATED PRICE</div>
+                <div class="estimate-value" id="estimated-price">Choose a category to see an estimate</div>
+                <p id="estimate-note">A rough guide only. Brand, model, condition, size, availability, and shipping can change the cost.</p>
+                <input type="hidden" id="estimated-price-value" name="Estimated price (not final)" value="Not calculated — no category selected">
+              </div>
+              <div class="disclaimer-list" aria-label="Important disclaimers">
+                <p><span aria-hidden="true">!</span> Estimated prices are <strong>NOT final</strong>.</p>
+                <p><span aria-hidden="true">!</span> There is <strong>no guarantee real items</strong> can be sourced or are available.</p>
+              </div>
+            </section>
+
+            <button class="submit-button" type="submit">Send product request <span aria-hidden="true">↗</span></button>
+            <p class="form-disclaimer">Please don’t send payment with this form. We’ll contact you to discuss options first.</p>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark">N<span>.</span></span>
+        <span class="brand-name">NORTHLINE <span>SUPPLY</span></span>
+      </a>
+      <p>Product sourcing, made straightforward.</p>
+      <span class="footer-small">Requests are not orders. All details are confirmed directly.</span>
+    </footer>
+  </div>
+</body>
+</html>
